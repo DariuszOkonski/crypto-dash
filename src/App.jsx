@@ -12,12 +12,18 @@ const App = () => {
     const fetchCoins = async () => {
       try {
         const res = await fetch(API_URL);
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
         const data = await res.json();
 
         setCoins(data);
         setLoading(false);
       } catch (err) {
         setError(err.message);
+      } finally {
         setLoading(false);
       }
     };

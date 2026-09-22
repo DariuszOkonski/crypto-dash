@@ -6,7 +6,7 @@ const LimitSelector = ({ limit, onLimitChange }) => {
         name=""
         id="limit"
         value={limit}
-        onChange={(e) => onLimitChange(e.target.value)}
+        onChange={(e) => onLimitChange(Number(e.target.value))}
       >
         <option value="5">5</option>
         <option value="10">10</option>

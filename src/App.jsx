@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/home";
+import AboutPage from "./pages/about";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -55,6 +56,7 @@ const App = () => {
           />
         }
       />
+      <Route path="/about" element={<AboutPage />} />
     </Routes>
   );
 };

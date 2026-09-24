@@ -30,7 +30,6 @@ const App = () => {
         const data = await res.json();
 
         setCoins(data);
-        setLoading(false);
       } catch (err) {
         setError(err.message);
       } finally {

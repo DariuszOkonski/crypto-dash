@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 
 const CoinCard = ({ coin }) => {
-  console.log("!!! coin: ", coin);
   return (
     <Link to={`/coin/${coin.id}`}>
       <div key={coin.id} className="coin-card">
